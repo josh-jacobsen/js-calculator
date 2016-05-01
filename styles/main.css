@@ -1,0 +1,17 @@
+
+#holder {
+  display: flex;
+  flex-direction: row;
+}
+
+#display {
+  width: 100px;
+  border: 1px solid blue;
+}
+
+
+
+.button {
+  width: 40px;
+  border: 1px solid black;
+}
