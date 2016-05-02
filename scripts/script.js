@@ -1,59 +1,105 @@
 
-calculationA = [];
-calculationB = [];
+calculationA = "";
+calculationB = "";
+inProgress = false;
 
 display = document.getElementById("display");
 
-var two = document.getElementById("two").addEventListener("click", function() {
+document.getElementById("zero").addEventListener("click", function() {
+  display.innerHTML += "0";
+  calculationA += "0";
+  console.log(calculationA);
+})
+
+document.getElementById("one").addEventListener("click", function() {
+  display.innerHTML += "1";
+  calculationA += "1";
+  console.log(calculationA);
+})
+
+document.getElementById("two").addEventListener("click", function() {
   display.innerHTML += "2";
-  calculationA.push(2);
+  calculationA += "2";
   console.log(calculationA);
 })
 
-var five = document.getElementById("five").addEventListener("click", function() {
-  console.log("5");
+document.getElementById("three").addEventListener("click", function() {
+  display.innerHTML += "3";
+  calculationA += "3";
+  console.log(calculationA);
+})
+
+document.getElementById("four").addEventListener("click", function() {
+  display.innerHTML += "4";
+  calculationA += "4";
+  console.log(calculationA);
+})
+
+document.getElementById("five").addEventListener("click", function() {
   display.innerHTML += "5";
-  calculationA.push(5);
+  calculationA += "5";
   console.log(calculationA);
 })
 
-var ten = document.getElementById("ten").addEventListener("click", function() {
-  console.log("10");
-})
-
-var add = document.getElementById("add").addEventListener("click", function() {
-  display.innerHTML = "";
-  var toNumber = calculationA.join("");
-  var number = parseFloat(toNumber);
-  console.log(number);
-  calculationB.push(number);
-  console.log(calculationB);
-  calculationA = [];
+document.getElementById("six").addEventListener("click", function() {
+  display.innerHTML += "6";
+  calculationA += "6";
   console.log(calculationA);
-
-
 })
 
-var subtract = document.getElementById("subtract").addEventListener("click", function() {
-  console.log("-");
+document.getElementById("seven").addEventListener("click", function() {
+  display.innerHTML += "7";
+  calculationA += "7";
+  console.log(calculationA);
 })
 
-var multiply = document.getElementById("multiply").addEventListener("click", function() {
-  console.log("X");
+document.getElementById("eight").addEventListener("click", function() {
+  display.innerHTML += "8";
+  calculationA += "8";
+  console.log(calculationA);
 })
 
-var equals = document.getElementById("equals").addEventListener("click", function() {
+document.getElementById("nine").addEventListener("click", function() {
+  display.innerHTML += "9";
+  calculationA += "9";
+  console.log(calculationA);
+})
+
+document.getElementById("plus").addEventListener("click", function() {
+  display.innerHTML += "+";
+  calculationA += "+";
+})
+
+document.getElementById("minus").addEventListener("click", function() {
+  display.innerHTML += "-";
+  calculationA += "-";
+})
+
+document.getElementById("multiply").addEventListener("click", function() {
+  display.innerHTML += "x";
+  calculationA += "*";
+})
+
+document.getElementById("devide").addEventListener("click", function() {
+  display.innerHTML += "/";
+  calculationA += "/";
+})
+
+document.getElementById("equals").addEventListener("click", function() {
   console.log("=");
-
+  var total = eval(calculationA);
+  console.log(total);
+  display.innerHTML = total;
+  calculationA = "";
 })
 
 document.getElementById("clear").addEventListener("click", function() {
   display.innerHTML = "";
-  calculationA = [];
+  calculationA = "";
   console.log(calculationA);
 })
 
-function addition(val1, val2){
-  return val1 + val2;
-}
+
+
+
 
