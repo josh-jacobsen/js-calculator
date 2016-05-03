@@ -1,3 +1,26 @@
+// function getId(element) {
+//   console.log(element.id);
+
+//   for (i = 0; i < numbers.length; i++) {
+//     numbers[i].addEventListener("click", function(event) {
+//       console.log(element.id);
+//       console.log(element.id);
+//       if (ongoingCalc === false) {
+//         display.innerHTML = "";
+//         display.innerHTML += element.id;
+//         calculationA += element.id
+//         ongoingCalc = true;
+//       }
+//       else {
+//         display.innerHTML += element.id;
+//         calculationA += element.id;
+//       }
+//     })
+//   }
+// }
+
+
+
 var calculationA = "";
 var calculationB = "";
 var firstCalculation = true;
@@ -5,149 +28,44 @@ var ongoingCalc = false;
 
 var display = document.getElementById("number-box");
 
-document.getElementById("0").addEventListener("click", function() {
+var numbers = document.getElementsByClassName("number");
+
+function number(element) {
+  console.log(element.id);
   if (ongoingCalc === false) {
     display.innerHTML = "";
-    display.innerHTML += "0";
-    calculationA += "0"
+    display.innerHTML += element.id;
+    calculationA += element.id
     ongoingCalc = true;
   }
   else {
-    display.innerHTML += "0";
-    calculationA += "0";
+    display.innerHTML += element.id;
+    calculationA += element.id;
   }
-})
+}
 
-document.getElementById("1").addEventListener("click", function() {
-  if (ongoingCalc === false) {
-    display.innerHTML = "";
-    display.innerHTML += "1";
-    calculationA += "1"
-    ongoingCalc = true;
-  }
-  else {
-    display.innerHTML += "1";
-    calculationA += "1";
-  }
-})
 
-document.getElementById("2").addEventListener("click", function() {
-  if (ongoingCalc === false) {
-    display.innerHTML = "";
-    display.innerHTML += "2";
-    calculationA += "2"
-    ongoingCalc = true;
-  }
-  else {
-    display.innerHTML += "2";
-    calculationA += "2";
-  }
-})
-
-document.getElementById("3").addEventListener("click", function() {
-  if (ongoingCalc === false) {
-    display.innerHTML = "";
-    display.innerHTML += "3";
-    calculationA += "3"
-    ongoingCalc = true;
-  }
-  else {
-    display.innerHTML += "3";
-    calculationA += "3";
-  }
-})
-
-document.getElementById("4").addEventListener("click", function() {
-  if (ongoingCalc === false) {
-    display.innerHTML = "";
-    display.innerHTML += "4";
-    calculationA += "4"
-    ongoingCalc = true;
-  }
-  else {
-    display.innerHTML += "4";
-    calculationA += "4";
-  }
-})
-
-document.getElementById("5").addEventListener("click", function() {
-  if (ongoingCalc === false) {
-    display.innerHTML = "";
-    display.innerHTML += "5";
-    calculationA += "5"
-    ongoingCalc = true;
-  }
-  else {
-    display.innerHTML += "5";
-    calculationA += "5";
-  }
-})
-
-document.getElementById("6").addEventListener("click", function() {
-  if (ongoingCalc === false) {
-    display.innerHTML = "";
-    display.innerHTML += "6";
-    calculationA += "6"
-    ongoingCalc = true;
-  }
-  else {
-    display.innerHTML += "6";
-    calculationA += "6";
-  }
-})
-
-document.getElementById("7").addEventListener("click", function() {
-  if (ongoingCalc === false) {
-    display.innerHTML = "";
-    display.innerHTML += "7";
-    calculationA += "7"
-    ongoingCalc = true;
-  }
-  else {
-    display.innerHTML += "7";
-    calculationA += "7";
-  }
-})
-
-document.getElementById("8").addEventListener("click", function() {
-  if (ongoingCalc === false) {
-    display.innerHTML = "";
-    display.innerHTML += "8";
-    calculationA += "8"
-    ongoingCalc = true;
-  }
-  else {
-    display.innerHTML += "8";
-    calculationA += "8";
-  }
-})
-
-document.getElementById("9").addEventListener("click", function() {
-  if (ongoingCalc === false) {
-    display.innerHTML = "";
-    display.innerHTML += "9";
-    calculationA += "9"
-    ongoingCalc = true;
-  }
-  else {
-    display.innerHTML += "9";
-    calculationA += "9";
-  }
-})
-
-document.getElementById("plus").addEventListener("click", function() {
+function action(element) {
   if (ongoingCalc === true) {
-    display.innerHTML += "+";
-    calculationA += "+";
+    display.innerHTML += element.id;
+    calculationA += element.id;
   }
-})
+}
 
-document.getElementById("minus").addEventListener("click", function() {
-  if (ongoingCalc === true) {
-    display.innerHTML += "-";
-    calculationA += "-";
-  }
-})
+
+// document.getElementById("+").addEventListener("click", function() {
+//   if (ongoingCalc === true) {
+//     display.innerHTML += "+";
+//     calculationA += "+";
+//   }
+// })
+
+// document.getElementById("-").addEventListener("click", function() {
+//   if (ongoingCalc === true) {
+//     display.innerHTML += "-";
+//     calculationA += "-";
+//   }
+// })
 
 document.getElementById("*").addEventListener("click", function() {
   if (ongoingCalc === true) {
@@ -156,21 +74,21 @@ document.getElementById("*").addEventListener("click", function() {
   }
 })
 
-document.getElementById("devide").addEventListener("click", function() {
+document.getElementById("/").addEventListener("click", function() {
   if (ongoingCalc === true) {
     display.innerHTML += "/";
     calculationA += "/";
   }
 })
 
-document.getElementById("point").addEventListener("click", function() {
+document.getElementById(".").addEventListener("click", function() {
   if (ongoingCalc === true) {
     display.innerHTML += ".";
     calculationA += ".";
   }
 })
 
-document.getElementById("equals").addEventListener("click", function() {
+document.getElementById("=").addEventListener("click", function() {
   if (ongoingCalc === true) {
     var total = eval(calculationA);
     display.innerHTML = total;
@@ -183,3 +101,5 @@ document.getElementById("clear").addEventListener("click", function() {
   display.innerHTML = "";
   calculationA = "";
 })
+
+

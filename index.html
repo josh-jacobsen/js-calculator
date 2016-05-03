@@ -12,78 +12,73 @@
 
       <div id="display">
         <p id="number-box"></p>
-
-<!--         <div id="number-box">
-
-        </div> -->
-
       </div>
       <div id="buttons">
         <div class="row">
           <div id="spacer">
             <p></p>
           </div>
-          <div class="button" id="clear">
+          <div class="action" id="clear" onclick="getId(this)">
             <p>AC</p>
           </div>
         </div><!-- end of row -->
 
         <div class="row">
-          <div class="button" id="7">
+          <div class="number" id="7" onclick="number(this)">
             <p>7</p>
           </div>
-          <div class="button" id="8">
+          <div class="number" id="8" onclick="number(this)">
             <p>8</p>
           </div>
-          <div class="button" id="9">
+          <div class="number" id="9" onclick="number(this)">
             <p>9</p>
           </div>
-          <div class="button" id="plus">
+          <div class="action" id="+" onclick="action(this)">
             <p>+</p>
           </div>
         </div><!-- end of row -->
 
         <div class="row">
-          <div class="button" id="4">
+          <div class="number" id="4" onclick="number(this)">
             <p>4</p>
           </div>
-          <div class="button" id="5">
+          <div class="number" id="5" onclick="number(this)">
             <p>5</p>
           </div>
-          <div class="button" id="6">
+          <div class="number" id="6" onclick="number(this)">
             <p>6</p>
           </div>
-          <div class="button" id="minus">
+          <div class="action" id="-" onclick="action(this)">
             <p>-</p>
           </div>
         </div><!-- end of row -->
 
         <div class="row">
-          <div class="button" id="1">
+          <div class="number" id="1" onclick="number(this)">
             <p>1</p>
           </div>
-          <div class="button" id="2">
+          <div class="number" id="2" onclick="number(this)">
             <p>2</p>
           </div>
-          <div class="button" id="3">
+          <div class="number" id="3" onclick="number(this)">
             <p>3</p>
           </div>
-          <div class="button" id="*">
+          <div class="action" id="*" onclick="getId(this)">
             <p>X</p>
           </div>
         </div><!-- end of row -->
 
         <div class="row">
-          <div class="button" id="0">
+          <div class="number" id="0" onclick="number(this)">
             <p>0</p>
           </div>
-          <div class="button" id="point">
+          <div class="action" id="." onclick="getId(this)">
             <p>.</p>
           </div>
-          <div class="button" id="equals">
+          <div class="action" id="=" onclick="getId(this)">
             <p>=</p>
           </div>
-          <div class="button" id="devide">
+          <div class="action" id="/" onclick="getId(this)">
             <p>/</p>
           </div>
         </div><!-- end of row -->
@@ -93,6 +88,24 @@
     </div><!-- end of around display and buttons -->
   </div><!-- end of container/holder -->
 
+
+<table>
+  <tr>
+    <td><input type="button" value="1" id="1" onclick="getId(this)"></td>
+    <td><input type="button" value="2" onclick="getId(this)"></td>
+    <td><input type="button" value="3" onclick="getId(this)"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="button" onclick="getId(this)"></td>
+    <td><input type="button" value="button" onclick="getId(this)"></td>
+    <td><input type="button" value="button" onclick="getId(this)"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="button" onclick="getId(this)"></td>
+    <td><input type="button" value="button" onclick="getId(this)"></td>
+    <td><input type="button" value="button" onclick="getId(this)"></td>
+  </tr>
+</table>
 
   <script type="text/javascript" src="scripts/script.js"></script>
 </body>
