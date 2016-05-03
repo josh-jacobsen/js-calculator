@@ -1,26 +1,3 @@
-// function getId(element) {
-//   console.log(element.id);
-
-//   for (i = 0; i < numbers.length; i++) {
-//     numbers[i].addEventListener("click", function(event) {
-//       console.log(element.id);
-//       console.log(element.id);
-//       if (ongoingCalc === false) {
-//         display.innerHTML = "";
-//         display.innerHTML += element.id;
-//         calculationA += element.id
-//         ongoingCalc = true;
-//       }
-//       else {
-//         display.innerHTML += element.id;
-//         calculationA += element.id;
-//       }
-//     })
-//   }
-// }
-
-
-
 var calculationA = "";
 var calculationB = "";
 var firstCalculation = true;
@@ -52,54 +29,14 @@ function action(element) {
   }
 }
 
-
-// document.getElementById("+").addEventListener("click", function() {
-//   if (ongoingCalc === true) {
-//     display.innerHTML += "+";
-//     calculationA += "+";
-//   }
-// })
-
-// document.getElementById("-").addEventListener("click", function() {
-//   if (ongoingCalc === true) {
-//     display.innerHTML += "-";
-//     calculationA += "-";
-//   }
-// })
-
-document.getElementById("*").addEventListener("click", function() {
-  if (ongoingCalc === true) {
-    display.innerHTML += "*";
-    calculationA += "*";
-  }
-})
-
-document.getElementById("/").addEventListener("click", function() {
-  if (ongoingCalc === true) {
-    display.innerHTML += "/";
-    calculationA += "/";
-  }
-})
-
-document.getElementById(".").addEventListener("click", function() {
-  if (ongoingCalc === true) {
-    display.innerHTML += ".";
-    calculationA += ".";
-  }
-})
-
-document.getElementById("=").addEventListener("click", function() {
+function execute(element) {
   if (ongoingCalc === true) {
     var total = eval(calculationA);
+    console.log(total);
+    console.log(total.toString().length);
     display.innerHTML = total;
     calculationA = "";
     ongoingCalc = false;
   }
-})
-
-document.getElementById("clear").addEventListener("click", function() {
-  display.innerHTML = "";
-  calculationA = "";
-})
-
+}
 

@@ -63,7 +63,7 @@
           <div class="number" id="3" onclick="number(this)">
             <p>3</p>
           </div>
-          <div class="action" id="*" onclick="getId(this)">
+          <div class="action" id="*" onclick="action(this)">
             <p>X</p>
           </div>
         </div><!-- end of row -->
@@ -72,13 +72,13 @@
           <div class="number" id="0" onclick="number(this)">
             <p>0</p>
           </div>
-          <div class="action" id="." onclick="getId(this)">
+          <div class="action" id="." onclick="action(this)">
             <p>.</p>
           </div>
-          <div class="action" id="=" onclick="getId(this)">
+          <div class="action" id="=" onclick="execute(this)">
             <p>=</p>
           </div>
-          <div class="action" id="/" onclick="getId(this)">
+          <div class="action" id="/" onclick="action(this)">
             <p>/</p>
           </div>
         </div><!-- end of row -->
@@ -87,25 +87,6 @@
 
     </div><!-- end of around display and buttons -->
   </div><!-- end of container/holder -->
-
-
-<table>
-  <tr>
-    <td><input type="button" value="1" id="1" onclick="getId(this)"></td>
-    <td><input type="button" value="2" onclick="getId(this)"></td>
-    <td><input type="button" value="3" onclick="getId(this)"></td>
-  </tr>
-  <tr>
-    <td><input type="button" value="button" onclick="getId(this)"></td>
-    <td><input type="button" value="button" onclick="getId(this)"></td>
-    <td><input type="button" value="button" onclick="getId(this)"></td>
-  </tr>
-  <tr>
-    <td><input type="button" value="button" onclick="getId(this)"></td>
-    <td><input type="button" value="button" onclick="getId(this)"></td>
-    <td><input type="button" value="button" onclick="getId(this)"></td>
-  </tr>
-</table>
 
   <script type="text/javascript" src="scripts/script.js"></script>
 </body>
