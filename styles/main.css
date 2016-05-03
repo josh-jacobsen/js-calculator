@@ -1,36 +1,55 @@
 
 #holder {
-  height: 400px;
+  height: 430px;
   width: 300px;
-  border: 1px solid green;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  border: 2px solid black;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
 
   //display: flex;
   //flex-direction: row;
 }
 
+
+
+#around-display-and-buttons {
+  height: 100%;
+  width: 85%;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  //margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #display {
-  //align-self: center;
-  //display: flex;
   height: 20%;
-  width: 80%;
-  text-align: center;
-  border: 1px solid blue;
+  width: 100%;
+  border: 2px solid blue;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#number-box {
+  margin: 0;
+  font-size: 300%;
 }
 
 #buttons {
   height: 60%;
-  width: 80%;
-  border: 1px solid red;
-
+  width: 100%;
+  margin: 0;
 }
 
 .row {
   width: 100%;
-  border: 1px solid green;
   display: flex;
 }
 
@@ -39,6 +58,7 @@
   margin: 0;
   text-align: center;
   border: 1px solid black;
+  background-color: grey;
 }
 
 #spacer {
@@ -47,4 +67,7 @@
 
 #clear {
   background-color: red;
+  border: 1px solid black;
+  margin-bottom: 10px;
+
 }
