@@ -1,5 +1,6 @@
 var calculationA = "";
 var ongoingCalc = false;
+var actionHit = false;
 
 function number(element) {
   if (ongoingCalc === false) {
@@ -7,17 +8,20 @@ function number(element) {
     display.innerHTML += element.id;
     calculationA += element.id
     ongoingCalc = true;
+    actionHit = false;
   }
   else {
     display.innerHTML += element.id;
     calculationA += element.id;
+    actionHit = false;
   }
 }
 
 function action(element) {
-  if (ongoingCalc === true) {
+  if (ongoingCalc === true && actionHit === false) {
     display.innerHTML += element.id;
     calculationA += element.id;
+    actionHit = true;
   }
 }
 
