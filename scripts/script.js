@@ -1,14 +1,7 @@
 var calculationA = "";
-var calculationB = "";
-var firstCalculation = true;
 var ongoingCalc = false;
 
-var display = document.getElementById("number-box");
-
-var numbers = document.getElementsByClassName("number");
-
 function number(element) {
-  console.log(element.id);
   if (ongoingCalc === false) {
     display.innerHTML = "";
     display.innerHTML += element.id;
@@ -21,7 +14,6 @@ function number(element) {
   }
 }
 
-
 function action(element) {
   if (ongoingCalc === true) {
     display.innerHTML += element.id;
@@ -32,11 +24,19 @@ function action(element) {
 function execute(element) {
   if (ongoingCalc === true) {
     var total = eval(calculationA);
-    console.log(total);
-    console.log(total.toString().length);
-    display.innerHTML = total;
+    if (total.toString().length < 4) {
+      display.innerHTML = total;
+    } else {
+      var sansDecimal = total.toFixed(4);
+      display.innerHTML = sansDecimal;
+    }
     calculationA = "";
     ongoingCalc = false;
   }
+}
+
+function ac(element) {
+  display.innerHTML = "";
+  calculationA = "";
 }
 
